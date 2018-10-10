@@ -8,7 +8,7 @@
 	if (1==1) {
 		# code...
 	}
-	//Pagina que hace mediante una tabla, la proyecion de todos los datos de la tabla usuarios
+	//Pagina que hace mediante una tabla, la proyecion de todos los datos de la tabla alumnos
 	if(1==1){
 		$stmt =	Datos::getUsuarios();
 		
@@ -39,7 +39,9 @@
 					<td><?= $datos['correo'] ?></td>
 					<?php
 						$stmt2= Datos::getTutorID($datos['idTutor']);
+						//se en particular un tutor con el id del alumno como parametro
 						$stmt3= Datos::getCarreraID($datos['idCarrera']);
+						//Se pide en particular una carrera con el ide de la carrera del usuario
 					?>
 					<td><?= $stmt3['nombre'] ?></td>
 					<td><?= $stmt2['nombre'] ?></td>
